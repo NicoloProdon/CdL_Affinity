@@ -1,0 +1,4 @@
+pandas~=1.4.0
+bnlearn~=0.6.0
+pgmpy~=0.1.17
+experta~=1.9.4
