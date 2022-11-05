@@ -27,7 +27,7 @@ if __name__ == '__main__':
             subTitle = "\nSONO DISPONIBILI 2 DIVERSE OPZIONI:"
             subOptions = [
                 "Rete bayesiana ideale (senza apprendimento da dataset)",
-                "Rete bayesiana con stimatore di massima verosomiglianza (con apprendimento da dataset)",
+                "Rete bayesiana con stimatore di massima verosimiglianza (con apprendimento da dataset)",
             ]
 
             subChoice = menu(subTitle, subOptions)
