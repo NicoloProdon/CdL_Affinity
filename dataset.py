@@ -65,8 +65,7 @@ class Dataset:
         dataset["BasiAsd"] = subjects3
         dataset["Affinity"] = affinity
 
-        final_dataset = dataset.drop_duplicates()
-        return final_dataset
+        return dataset
 
     # load an existing dataset or generate a new one
     def load_dataset(self):

@@ -33,11 +33,17 @@ def start_bayes(dataset, method: str = "ideal" or "maximumlikelihood"):
 
     if affinity >= 75:
         print("\n**Complimenti! La facolta' soddisfa molto le tue esigenze, iscrizione CALDAMENTE consigliata**")
+        if evidences['AsoProg'] == 1:
+            print("\n**Complimenti! Nel corso di informatica si parlerà di cio che a te piace di AsoProg")
+        if evidences['AiReti'] == 1:
+            print("\n**Complimenti! Nel corso di informatica si parlerà di cio che a te piace di AiReti")
+        if evidences['BasiAsd'] == 1:
+            print("\n**Complimenti! Nel corso di informatica si parlerà di cio che a te piace di Basi")
     elif affinity >= 60:
         print("\n**La facolta' soddisfa mediamente le tue esigenze, iscrizione CONSIGLIATA**")
     elif affinity >= 40:
         print("\n**La facolta' soddisfa solo ALCUNE tue esigenze, si consiglia RIFLESSIONE prima dell'iscrizione**.")
-    elif affinity >= 20:
+    elif affinity >= 1:
         print("\n**La facolta' soddisfa POCHE tue esigenze, iscrizione NON consigliata**.")
     else:
         print("\n**Siamo spiacenti! La facolta' non potrebbe in ALCUN MODO soddisfarti. Iscrizione NON consigliata**")
@@ -88,20 +94,20 @@ class BayesDiagnostic:
                                        evidence_card=[2])
         self.AsoprogCPT = TabularCPD(variable='AsoProg',
                                      variable_card=2,
-                                     values=[[0.85, 0.15],
-                                             [0.15, 0.85]],
+                                     values=[[0.80, 0.20],
+                                             [0.20, 0.80]],
                                      evidence=['Affinity'],
                                      evidence_card=[2])
         self.AiretiCPT = TabularCPD(variable="AiReti",
                                     variable_card=2,
-                                    values=[[0.85, 0.15],
-                                            [0.15, 0.85]],
+                                    values=[[0.80, 0.20],
+                                            [0.20, 0.80]],
                                     evidence=['Affinity'],
                                     evidence_card=[2])
         self.BasiAsdCPT = TabularCPD(variable='BasiAsd',
                                      variable_card=2,
-                                     values=[[0.85, 0.15],
-                                             [0.15, 0.85]],
+                                     values=[[0.80, 0.20],
+                                             [0.20, 0.80]],
                                      evidence=['Affinity'],
                                      evidence_card=[2])
         self.AffinityCPT = TabularCPD(variable='Affinity',

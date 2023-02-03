@@ -23,7 +23,7 @@ if __name__ == '__main__':
             start_expert()
 
         # second menu to choose type of bayesian diagnostic
-        if choice == 2:
+        elif choice == 2:
             subTitle = "\nSONO DISPONIBILI 2 DIVERSE OPZIONI:"
             subOptions = [
                 "Rete bayesiana ideale (senza apprendimento da dataset)",
@@ -35,10 +35,10 @@ if __name__ == '__main__':
                 print("\n*Valutazione con rete bayesiana IDEALE*")
                 dataset = None
                 start_bayes(dataset, "normal")
-            if subChoice == 2:
+            elif subChoice == 2:
                 print("\n*Valutazione con rete bayesiana con STIMATORE DI MASSIMA VEROSOMIGLIANZA*")
                 dataset = Dataset("data/dataset.csv")
                 Dataset.load_dataset(dataset)
                 start_bayes(dataset, "maximumlikelihood")
-        if choice != 3:
+        elif choice != 3:
             wait()
