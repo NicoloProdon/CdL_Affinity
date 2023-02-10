@@ -33,18 +33,35 @@ def start_bayes(dataset, method: str = "ideal" or "maximumlikelihood"):
 
     if affinity >= 75:
         print("\n**Complimenti! La facolta' soddisfa molto le tue esigenze, iscrizione CALDAMENTE consigliata**")
+        print("\n**Il sistema ha valutato positivamente l'interesse verso:")
         if evidences['AsoProg'] == 1:
-            print("\n**Complimenti! Nel corso di informatica si parlerà di cio che a te piace di AsoProg")
+            print("\n++Arichitettura degli Eleboratori e Sistemi Operativi, Programmazione++")
         if evidences['AiReti'] == 1:
-            print("\n**Complimenti! Nel corso di informatica si parlerà di cio che a te piace di AiReti")
+            print("\n++Ingegneria della Conoscenza e Reti di Calcolatori++")
         if evidences['BasiAsd'] == 1:
-            print("\n**Complimenti! Nel corso di informatica si parlerà di cio che a te piace di Basi")
+            print("\n++Basi Di Dati e Algoritmi e Strutture Dati")
+            
     elif affinity >= 60:
         print("\n**La facolta' soddisfa mediamente le tue esigenze, iscrizione CONSIGLIATA**")
+        print("\n**Il sistema ha valutato positivamente l'interesse verso:")
+        if evidences['AsoProg'] == 1:
+            print("\n++Arichitettura degli Eleboratori e Sistemi Operativi, Programmazione++")
+        if evidences['AiReti'] == 1:
+            print("\n++Ingegneria della Conoscenza e Reti di Calcolatori++")
+        if evidences['BasiAsd'] == 1:
+            print("\n++Basi Di Dati e Algoritmi e Strutture Dati")
+            
     elif affinity >= 40:
         print("\n**La facolta' soddisfa solo ALCUNE tue esigenze, si consiglia RIFLESSIONE prima dell'iscrizione**.")
-    elif affinity >= 1:
-        print("\n**La facolta' soddisfa POCHE tue esigenze, iscrizione NON consigliata**.")
+        if evidences['AsoProg'] == 1:
+            print("\n**Il sistema ha valutato positivamente l'interesse verso:\n++Arichitettura degli Eleboratori e Sistemi Operativi, Programmazione++")
+        if evidences['AiReti'] == 1:
+            print("\n**Il sistema ha valutato positivamente l'interesse verso:\n++Ingegneria della Conoscenza e Reti di Calcolatori++")
+        if evidences['BasiAsd'] == 1:
+            print("\n**Il sistema ha valutato positivamente l'interesse verso:\n++Basi Di Dati e Algoritmi e Strutture Dati")
+            
+    elif affinity >= 20:
+        print("\n**La facolta' soddisfa POCO le tue esigenze, iscrizione NON consigliata**.")
     else:
         print("\n**Siamo spiacenti! La facolta' non potrebbe in ALCUN MODO soddisfarti. Iscrizione NON consigliata**")
 
