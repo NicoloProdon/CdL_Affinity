@@ -10,7 +10,7 @@ class Dataset:
     def __init__(self, training: str):
         self.training_path = training
 
-    # creation of dataset with all possible solutions, without duplicate rows
+    # dataset creation
     @classmethod
     def generate(cls):
         dataset = DataFrame(columns=('Life', 'Work', 'Stem', 'Math', 'Institute',
@@ -26,7 +26,7 @@ class Dataset:
         subjects3 = []
         affinity = []
 
-        # for every item choose 0 or 1, create 10000 solutions and then drop duplicates
+        # for every item choose 0 or 1, create 10000 combinations
         for i in range(0, 10000):
             life.append(choice(possible_val))
             work.append(choice(possible_val))
