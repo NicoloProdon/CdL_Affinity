@@ -7,4 +7,4 @@ PRODON NICOLO’ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Ma
   
 Sistema intelligente per l'orientamento agli studi del CdL in Informatica.
 
-Clicca [qui](https://github.com/NicoloProdon/CdL_Affinity/blob/main/documentazione%20progettuale.pdf) per la documentazione progettuale, o consulta il file **documentazione_progettuale.pdf**.  
+Clicca [qui](https://github.com/NicoloProdon/CdL_Affinity/blob/main/CdL_Affinity.pdf) per leggere la documentazione progettuale, o consulta il file **CdL_Affinity.pdf**.  
